@@ -1,4 +1,4 @@
-#include <iosteam>
+#include <iostream>
 #include <string>
 #include <sstream>
 
@@ -9,10 +9,12 @@ protected:
 	string id;
 	int horasLab;
 	float precioHora;
-	int anosLaborados
+	int anosLaborados;
 
 public:
+
 	Trabajador();
+
 	Trabajador(string id, int horasLab, float precioHora, int anosLaborados);
 
 	virtual float calcularSalarioBase();
@@ -27,5 +29,21 @@ public:
 
 	virtual float calcularSalarioNeto();
 
+	const string getID();
 
+	int getHorasLab();
+
+	float getPrecioHora();
+
+	int getAnosLaborados();
+
+	void setID(const string id);
+
+	void setHorasLab(int horasLab);
+
+	void setPrecioHora(float precioHora);
+
+	void setAnosLaborados(int anosLaborados);
+
+	string toString();
 };
